@@ -33,9 +33,10 @@ def get_materials_from_sheets():
     try:
         st.write("Mencoba mengambil data dari Google Sheets...")
         # Sesuaikan dengan path ke file credentials JSON Anda
-        credentials = service_account.Credentials.from_service_account_file(
-            'ahsp-solusindo-458314-11383570e2bb.json',
-            scopes=['https://www.googleapis.com/auth/drive']
+        credentials_dict = json.loads(st.secrets["GSHEET_CREDENTIALS"])
+        credentials = service_account.Credentials.from_service_account_info(
+            credentials_dict,
+            scopes=["https://www.googleapis.com/auth/drive"],
         )
         
         # Buat client gspread
