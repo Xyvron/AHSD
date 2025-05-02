@@ -326,7 +326,7 @@ def send_to_n8n():
     data["total_budget_formatted"] = format_rupiah(total_budget)
     
     # URL webhook n8n - Pastikan ini adalah URL webhook yang valid dari n8n
-    webhook_url = "https://xyvron.app.n8n.cloud/webhook-test/26c673fb-77bd-4bdc-8ddf-19525499175c"
+    webhook_url = "https://xyvron.app.n8n.cloud/webhook/26c673fb-77bd-4bdc-8ddf-19525499175c"
     
     try:
         # Kirim data ke n8n - Hapus komentar dari baris ini
